@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href='./doc.css'>
+   
+    <title>FlashcardJS - API Documentation</title>
+
+ </head>
+ <body style="font-family: Verdana, Geneva, Tahoma, sans-serif;margin:0;">
+   
+      <div style="margin:0;
+                  padding: 20px 20px;
+                  background-color: rgb(175, 252, 255);
+                  overflow: visible;">
+         <a style="text-decoration: none;
+   
+         font-size: 150%;
+         color: rgb(39, 99, 189);
+         padding: 10px 10px;
+         font-family: Chalkboard;
+         border-width: 1;" href = './index.html'>Flashcard.js</a>
+         <a style="text-decoration: none;
+         margin-left: 60%;
+         font-size: 120%;
+         color: rgb(39, 99, 189);
+         padding: 10px 10px;
+         border: solid;
+         border-width: 1;" href = './examples.html'>Examples</a>
+         <a style="text-decoration: none;
+         font-size: 120%;
+         color: rgb(39, 99, 189);
+         padding: 10px 10px;
+         border: solid;
+         border-width: 1;" href = './documentation.html'>API Documentation</a>
+      </div>
+      <div class='container' style = 'padding: 10px 40px;'>
+         <h2 style="font-size: 200%; color: #13349E;">API Documentation<h2>
+         <p style="font-size: 115%;
+                  font-weight: 100;
+                  color: #13349E;">Getting Started</p>
+         <p style="font-size: 70%;
+                  font-weight: 100;">To use Flashcard.js, several scripts and links must be added to your HTML file. Include the flashcard.js file in the script tag of your HTML file. Also link styling.css to your HTML file. Include jquery library in a script tag. Finally, include your javascript file which will be using Flashcard.js.</p>
+         <p style="font-size: 70%;
+         font-weight: 100;
+         font-family: 	Courier New;
+         margin-left: 10%;
+         background-color: #EFFDFF; 
+         padding: 20px 20px;
+         width: 70%;">
+            &lt;link rel="stylesheet" type="text/css" href='/path/to/styling.css'> <br>
+            &lt;script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <br>
+            &lt;script defer type="text/javascript" src='/path/to/flashcard.js'></script> <br>
+            &lt;script defer type="text/javascript" src='/path/to/examples.js'></script> <br>
+         </p>
+         <br/>
+
+         <p style="font-size: 115%;
+                  font-weight: 100;
+                  color: #13349E;">API: Object Creation</p>
+         <p style="font-size: 70%;
+                  font-weight: 100;">To create a single sided flashcard deck, instantiate it using 'FlashcardsSingleSided' and pass the title of the deck as an argument:</p>
+         <p style="font-size: 70%;
+         font-weight: 100;
+         font-family: 	Courier New;
+         margin-left: 10%;
+         background-color: #EFFDFF; 
+         padding: 20px 20px;
+         width: 70%;">
+         const f = new FlashcardsSingleSided("Title of this single sided deck")
+         </p>
+         <br/>
+         <p style="font-size: 70%;
+                  font-weight: 100;">To create a double sided flashcard deck, instantiate it using 'FlashcardsDoubleSided' and pass the title of the deck as an argument:</p>
+         <p style="font-size: 70%;
+         font-weight: 100;
+         font-family: 	Courier New;
+         margin-left: 10%;
+         background-color: #EFFDFF; 
+         padding: 20px 20px;
+         width: 70%;">
+         const f2 = new FlashcardsDoubleSided("Title of this double sided deck")
+         </p>
+         <br/>
+         <p style="font-size: 70%;
+                  font-weight: 100;">To create an input form that allows users to create their own decks, instantiate it using "InputForm" and pass in a title as an argument:</p>
+         <p style="font-size: 70%;
+         font-weight: 100;
+         font-family: 	Courier New;
+         margin-left: 10%;
+         background-color: #EFFDFF; 
+         padding: 20px 20px;
+         width: 70%;">
+         const form = new InputForm("Title of this input form")
+         </p>
+         <br/>
+         <p style="font-size: 115%;
+                  font-weight: 100;
+                  color: #13349E;">API: Methods</p>
+         <p style="font-size: 80%;
+                  font-weight: 100;
+                  color: #13349E;">Single sided deck methods</p>
+         <p style="font-size: 70%;
+         font-weight: 100;">Below is a list of methods available for FlashcardsSingleSided</p>
+         
+         <div style="background-color: #EFFDFF; padding: 20px 0px;">
+            <table style='font-size: 60%;'>
+               <thead>
+                  <tr>
+                     <th>Method</th>
+                     <th>Description</th>
+                     <th>Arguments</th>
+                     <th>Return Values</th>
+                     <th>Example</th>
+                  </tr>
+               </thead>
+               <tr>
+                  <td>.getAllOriginalCards()</td>
+                  <td>Get all cards in the original deck</td>
+                  <td>-</td>
+                  <td>Array of single sided card objects, each with a 'front' field for the value on that card</td>
+                  <td>f.getAllOriginalCards()</td>
+               </tr>
+               <tr>
+                  <td>.getAllFavoritedCards()</td>
+                  <td>Get all cards in the favorited deck(deck with favorited cards)</td>
+                  <td>-</td>
+                  <td>Array of single sided card objects, each with a 'front' field for the value on that card</td>
+                  <td>f.getAllFavoritedCards()</td>
+               </tr>
+               <tr>
+                  <td>.addSingleSidedCard(cardValue)</td>
+                  <td>Add a single sided card to the deck. Added to the main, original deck, not the favorited deck.</td>
+                  <td>String</td>
+                  <td>-</td>
+                  <td>f.addSingleSidedCard('I am a new card')</td>
+               </tr>
+               <tr>
+                  <td>.removeSingleSidedCard(cardValue)</td>
+                  <td>Removes the card with cardValue as its value. Removes from both main deck and favorites deck.</td>
+                  <td>String</td>
+                  <td>-</td>
+                  <td>f.removeSingleSidedCard('I am a new card')</td>
+               </tr>
+               <tr>
+                  <td>.addFavorite(cardValue)</td>
+                  <td>Adds a card to the favorited cards deck.</td>
+                  <td>String</td>
+                  <td>-</td>
+                  <td>f.addFavorite('I am a favorited card')</td>
+               </tr>
+               <tr>
+                  <td>.shuffleDeck()</td>
+                  <td>Shuffles the deck to a random order.</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>f.shuffleDeck()</td>
+               </tr>
+               <tr>
+                  <td>.disablePreview()</td>
+                  <td>Disables the side preview. Removes the panel which displays all the card values at once.</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>f.disablePreview()</td>
+               </tr>
+               <tr>
+                  <td>.selectAnimation(animationName)</td>
+                  <td>Selects an animation type for this deck. If this method is not called, the default is no animations.</td>
+                  <td>String of one of the following animations: 
+                     <ul>
+                        <li>move</li>
+                        <li>fade</li>
+                        <li>move-and-fade</li>
+                        <li>spin</li>
+                        <li>roll-blur</li>
+                        <li>grow</li>
+                     </ul></td>
+                  <td>-</td>
+                  <td>f.selectAnimation('move-and-fade')</td>
+               </tr>
+            </table>
+         </div>
+
+         <br/>
+         <p style="font-size: 80%;
+         font-weight: 100;
+         color: #13349E;">Double sided deck methods</p>
+         <p style="font-size: 70%;
+         font-weight: 100;">Below is a list of methods available for FlashcardsDoubleSided</p>
+         
+         <div style="background-color: #EFFDFF; padding: 20px 0px;">
+            <table style='font-size: 60%; width: 100%;'>
+               <thead>
+                  <tr>
+                     <th>Method</th>
+                     <th>Description</th>
+                     <th>Arguments</th>
+                     <th>Return Values</th>
+                     <th>Example</th>
+                  </tr>
+
+               </thead>
+               <tbody>
+               <tr>
+                  <td>.getAllOriginalCards()</td>
+                  <td>Get all cards in the original deck</td>
+                  <td>-</td>
+                  <td>Array of double sided card objects, each with a 'front' field, 'back' field, and 'points' field.</td>
+                  <td>f2.getAllOriginalCards()</td>
+               </tr>
+               <tr>
+                  <td>.getAllFavoritedCards()</td>
+                  <td>Get all cards in the favorited deck(deck with favorited cards)</td>
+                  <td>-</td>
+                  <td>Array of double sided card objects, each with a 'front' field, 'back' field, and 'points' field.</td>
+                  <td>f2.getAllFavoritedCards()</td>
+               </tr>
+               <tr>
+                  <td>.addDoubleSidedCard(frontCardValue, backCardValue, points)</td>
+                  <td>Adds a card to the main, original deck.</td>
+                  <td>String, String, int</td>
+                  <td>-</td>
+                  <td>f2.addDoubleSidedCard('Front of favorited card', 'Back of favorited card', 20)</td>
+               </tr>
+               <tr>
+                  <td>.removeDoubleSidedCard(frontCardValue, backCardValue)</td>
+                  <td>Removes a card from both the original deck and favorited deck.</td>
+                  <td>String, String</td>
+                  <td>-</td>
+                  <td>f2.removeDoubleSidedCard('Front of favorited card', 'Back of favorited card')</td>
+               </tr>
+               <tr>
+                  <td>.addFavorite(frontCardValue, backCardValue, points)</td>
+                  <td>Adds a card to the favorited cards deck.</td>
+                  <td>String, String, int</td>
+                  <td>-</td>
+                  <td>f2.addFavorite('Front of favorited card', 'Back of favorited card', 20)</td>
+               </tr>
+               <tr>
+                  <td>.shuffleDeck()</td>
+                  <td>Shuffles the deck to a random order.</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>f2.shuffleDeck()</td>
+               </tr>
+               <tr>
+                  <td>.disablePreview()</td>
+                  <td>Disables the side preview. Removes the panel which displays all the card values at once.</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>f2.disablePreview()</td>
+               </tr>
+               <tr>
+                  <td>.selectAnimation(animationName)</td>
+                  <td>Selects an animation type for this deck. If this method is not called, the default is no animations.</td>
+                  <td>String of one of the following animations: 
+                     <ul>
+                        <li>move</li>
+                        <li>fade</li>
+                        <li>move-and-fade</li>
+                        <li>spin</li>
+                        <li>roll-blur</li>
+                        <li>grow</li>
+                     </ul></td>
+                  <td>-</td>
+                  <td>f2.selectAnimation('move-and-fade')</td>
+               </tr>
+               <tr>
+                  <td>.disableSkip()</td>
+                  <td>Disables the skip feature, i.e. users will not be able to skip answering a card's question.</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>f2.disableSkip()</td>
+               </tr>
+               <tr>
+                  <td>.disableLeaderboard()</td>
+                  <td>Prevents the leaderboard from being displayed.</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>f2.disableLeaderboard()</td>
+               </tr>
+               <tr>
+                  <td>.sortLeaderboardBy(sortBy)</td>
+                  <td>Sorts the leaderboard by either top points or top number of questions answered correctly. If this method is never called, the default sort is by points.</td>
+                  <td>String that is one of: 
+                     <ul>
+                        <li>points</li>
+                        <li>numCorrect</li>
+                     </ul>
+                  </td>
+                  <td>-</td>
+                  <td>f2.sortLeaderboardBy('numCorrect')</td>
+               </tr>
+            </tbody>
+            </table>
+         </div>
+      </div>
+
+ </body>
+
+</html>

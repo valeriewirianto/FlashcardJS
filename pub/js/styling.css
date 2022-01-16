@@ -1,0 +1,199 @@
+.flashcard{
+    background-color: white; 
+    border-style: solid; 
+    border-radius: 13%;
+    border-width: 2px;
+    height: 300px; 
+    width: 520px; 
+    text-align: center;
+    font-family: Verdana;
+}
+
+.titleFlashcard{
+    font-family: Verdana;
+}
+
+.paragraphCard{
+    font-size: larger;
+    margin-top: 25%;
+    position: relative;
+}
+
+button {
+    margin-left: 2%;
+    background-color: #a8e6ff;
+    border: none;
+    color: black;
+    padding: 15px 10px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.shuffleButton{
+    margin-left: 1%;
+    background-color: #a8e6ff;
+    border: none;
+    color: black;
+    padding: 15px 10px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.backButton{
+    margin-left: 30%;
+    background-color: #a8e6ff;
+    border: none;
+    padding: 10px 32px;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.nextbutton{
+    margin-left: 1%;
+    background-color: #a8e6ff;
+    border: none;
+    padding: 10px 32px;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.flashcardPanel{
+    float:left;
+    background-color: #e6ffff;
+    padding: 10px 20px;
+    height: 400px;
+    border: solid;
+    border-width: thin;
+    border-color:#d5e6e5;   
+}
+
+.previewBar{
+    float:left;
+    height: 400px;
+    width: 20%;
+    background-color:#b3ffff;
+    border: solid;
+    border-width: thin;
+    border-color:#d5e6e5;
+    font-family: Verdana;
+    font-size: 12px;
+    padding: 10px 10px;
+}
+
+.panel{
+    height: 450px;
+    margin-left: 3%;
+}
+
+.skipButton{
+    margin-left: 15%;
+    background-color: #a8e6ff;
+    border: none;
+    color: black;
+    padding: 15px 10px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.checkAnswerButton{
+    margin-left: 40%;
+    background-color: #a8e6ff;
+    border: none;
+    color: black;
+    padding: 15px 10px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.correctButton{
+    margin-left: 2%;
+    background-color: #a8e6ff;
+    border: none;
+    color: black;
+    padding: 15px 10px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;   
+}
+
+.incorrectButton{
+    margin-left: 25%;
+    background-color: #a8e6ff;
+    border: none;
+    color: black;
+    padding: 15px 10px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.panelLeaderboard{
+    float:left;
+    background-color: #b3ffff;
+    padding: 15px 15px;
+    font-family: Verdana;
+    font-size: 13px;
+    height: 390px;
+    border: solid;
+    border-width: 1px;
+    border-color:#d5e6e5;
+}
+
+@keyframes fade {
+    0%   {opacity: 0}
+    100% {opacity: 1}
+}
+
+@keyframes move {
+    from { top: -120px; }
+    to   { top: 0;}
+}
+
+@keyframes move-and-fade {
+    from { top: -120px; }
+    to   { top: 0;}
+    0%   {opacity: 0}
+    100% {opacity: 1}
+}
+
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+@keyframes roll-blur {
+    0% {
+        transform: translateX(-200px) rotate(-720deg);
+        filter: blur(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) rotate(0deg);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+@keyframes grow {
+    0% {
+        transform:  scale(0.5, 0.5);
+        opacity: 0;
+    }
+    100% {
+        transform:  scale(1, 1);
+        opacity: 1;
+    }
+}
+
+
+
